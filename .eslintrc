@@ -1,0 +1,31 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/babel",
+    "prettier/flowtype",
+    "prettier/standard"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "import/no-extraneous-dependencies": 0,
+    "no-confusing-arrow": 0,
+    "no-mixed-operators": "warn",
+
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "SequenceExpression",
+        "message": "The comma operator is confusing and a common mistake. Don’t use it!"
+      }
+    ],
+    "no-unused-vars": 0
+  }
+}
